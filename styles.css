@@ -37,20 +37,20 @@ nav {
 }
 body {
   color: white;
-
   background-size: cover;
   background-color: black;
   padding-top: 54.4px;
 }
 nav li:first-child {
   margin-right: auto;
-  margin-left: 15px;
+  margin-left: auto;
 }
 span {
   font-weight: bold;
   color: red;
 }
-#navigation:hover {
+#navigation:hover,
+h3:hover {
   text-shadow: 0 0 10px red; /* comme allumer une lumière */
   color: red;
   transition: color 0.5s ease-in;
@@ -69,6 +69,7 @@ span {
   padding: 0 20px;
 }
 h1 {
+  letter-spacing: 3px;
   text-align: center;
   font-size: 4.5em;
   margin-bottom: 30px;
@@ -76,7 +77,22 @@ h1 {
   text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
   animation: fadeInUp 1s ease;
 }
-
+h1.typewriter {
+  overflow: hidden;
+  border-right: 3px solid red;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ff0000;
+  text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+  animation: fadeInUp 1s ease;
+  text-align: center;
+}
+/*l animation de la machine a text du titre*/
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -85,6 +101,14 @@ h1 {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
 span {
@@ -96,16 +120,16 @@ span {
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 40px;
-  color: #e0e0e0; 
+  color: #e0e0e0;
   max-width: 600px;
   text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
   animation: fadeInUp 1.5s ease;
-  
 }
 
+.btn-secondary,
 .btn-start {
   text-decoration: none;
-  background-color: #e74c3c;
+  background-color: red;
   color: white;
   padding: 15px 40px;
   border-radius: 30px;
@@ -116,23 +140,25 @@ span {
   border: 2px solid transparent;
 }
 
-
-.btn-start:hover {
+.btn-start:hover,
+.whyusimg:hover {
   background-color: transparent;
-  border-color: #e74c3c;
+  border-color: red;
   transform: scale(1.05);
   box-shadow: 0 8px 40px rgba(255, 0, 0, 0.8);
 }
-
-
-@media (max-width: 768px) {
-  .main-title {
-    font-size: 2.5rem;
-  }
-  .sub-title {
-    font-size: 1.1rem;
-  }
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid #ff0000;
 }
+
+.btn-secondary:hover {
+  background: red;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 40px rgba(255, 0, 0, 0.8);
+}
+
 .background-clip {
   position: absolute;
   top: 0;
@@ -143,3 +169,171 @@ span {
   object-fit: cover;
   filter: brightness(40%) blur(2px); /*ameliore qualite de l'image affecte par la Vit*/
 }
+.logo img {
+  width: 50px;
+  height: auto;
+}
+.welcome {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-family: montsserrat, sans-serif;
+  line-height: 1.6;
+  text-align: center;
+}
+.carousel {
+  margin: 50px 0;
+  width: 100%;
+  border-top: 3px solid red;
+  border-bottom: 3px solid red;
+  display: flex;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.9)
+  );
+  padding: 20px 0;
+}
+/* Masquer la scrollbar */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.conteair_carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scroll 20s infinite linear;
+  gap: 30px;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.card_carousel {
+  flex: 0 0 200px;
+  height: 200px;
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  border: 2px solid rgba(255, 0, 0, 0.3);
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2);
+}
+.card_carousel:hover {
+  transform: scale(1.05);
+  border-color: red;
+  box-shadow: 0 8px 40px rgba(255, 0, 0, 0.6);
+}
+.card_carousel i {
+  color: red;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
+}
+.card_carousel h3 {
+  font-size: 1.2em;
+  color: white;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+/*l enroulement de la carousel*/
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: red;
+  }
+}
+.why_us {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50px;
+  text-align: center;
+  gap: 50px;
+}
+.whyusimg {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+.whyUS {
+  border-radius: 30px;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 40px rgba(255, 0, 0, 0.8);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.whyUS:hover {
+  transform: scale(1.05);
+  border-color: red;
+}
+/* la partie de meet our coaches*/
+.coach {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.coaching {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.coaching:hover {
+  transform: scale(1.05);
+  transition: transform 2s;
+  box-shadow: 0 8px 40px rgba(255, 0, 0, 0.8);
+  border-color: red;
+}
+.coach-card{
+  border: 2px solid transparent;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 40px rgba(255, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.coach-card:hover {
+  transform: scale(1.05);
+  transition: transform 5s ease;
+  box-shadow: 0 8px 40px rgba(255, 0, 0, 0.8);
+}
+
+
+
+
+
+
