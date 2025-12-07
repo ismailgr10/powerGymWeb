@@ -106,12 +106,17 @@ h1 {
   animation: fadeInUp 1s ease;
 }
 h1.typewriter {
-  overflow: hidden;
-  border-right: 3px solid red;
+  overflow: hidden; /*le teste qui depasse la largeur sera masqué*/
+  border-right: 3px solid red; /*comme un curseur*/
   white-space: nowrap;
   margin: 0 auto;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite; /*ici steps-end clignote le cursor quand on termine une etape */
+  /* steps() divise l'animation en intervalles apparition lettre par lettre
+  steps(nombre_d'étapes, position)
+  nombre_d'étapes : Combien de sauts l'animation fera (ici 40 designant 40 lettres)
+  position : start ou end (moment où le changement se produit dans chaque intervalle)*/
 }
+/*typing fait passer la largeur du texte*/
 h2 {
   font-size: 2em;
   margin-bottom: 20px;
@@ -120,7 +125,6 @@ h2 {
   animation: fadeInUp 1s ease;
   text-align: center;
 }
-/*l animation de la machine a text du titre*/
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -137,6 +141,17 @@ h2 {
   }
   to {
     width: 100%;
+  }
+}
+/*le deplacement du curseur*/
+@keyframes blink-caret {
+  /* le curseur apparait et disparait régulièrement */
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: red;
   }
 }
 span {
@@ -227,7 +242,7 @@ p {
   width: 100%;
   border-top: 3px solid red;
   border-bottom: 3px solid red;
-  display: flex;
+  display: flex;/*flex pour aligner les classes conteair-carousel horizontalement */
   overflow: hidden;
   background: linear-gradient(
     to right,
@@ -242,7 +257,7 @@ p {
   display: none;
 }
 .conteair_carousel {
-  display: flex;
+  display: flex; /*flex pour aligner les cartes horizontalement dans la carousel*/
   align-items: center;
   justify-content: center;
   animation: scroll 20s infinite linear;
@@ -290,15 +305,7 @@ p {
   text-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 }
 /*l enroulement de la carousel*/
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: red;
-  }
-}
+
 .why_us {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -383,7 +390,6 @@ p {
   transform: translateX(0);
   opacity: 1;
 }
-
 
 @media (max-width: 768px) {
   .hamburger {
