@@ -1,0 +1,164 @@
+/* Reset basique */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000; /* Noir pur */
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Header */
+.navbar {
+    background-color: #0a0a0a;
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #ff0000; /* Ligne rouge */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.logo i {
+    color: #ff0000; /* Icône rouge */
+    margin-right: 10px;
+}
+
+/* Layout */
+.container {
+    max-width: 1100px;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* Cartes */
+.card {
+    background-color: #111111; /* Gris très sombre */
+    padding: 2rem;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #ff0000; /* Bordure rouge au survol */
+}
+
+.card h2 {
+    color: #ff0000;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+/* Inputs */
+.field {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #ff0000; /* Focus rouge */
+    background-color: #222222;
+}
+
+/* Boutons */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #ff0000; /* Fond rouge */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #cc0000; /* Rouge plus foncé */
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Résultats */
+.result-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #000000;
+    border: 1px solid #333333;
+    border-left: 4px solid #ff0000;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.result-box span {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.result-box small {
+    color: #ff0000;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #555555;
+    font-size: 0.8rem;
+}

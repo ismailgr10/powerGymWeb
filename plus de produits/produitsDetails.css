@@ -1,0 +1,329 @@
+/* ============================================
+   PRODUCT DETAILS PAGE STYLES
+   ============================================ */
+
+/* ============================================
+   CONTAINER & LAYOUT
+   ============================================ */
+.product-details-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px;
+  min-height: 100vh;
+}
+
+/* ============================================
+   BACK BUTTON
+   ============================================ */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  background: linear-gradient(135deg, #ff0000, #dc143c);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 32px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, #dc143c, #8b0000);
+  transform: translateX(-5px);
+  box-shadow: 0 5px 15px rgba(220, 20, 60, 0.4);
+}
+
+/* ============================================
+   PRODUCT GRID
+   ============================================ */
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 64px;
+  background: #1a1a1a;
+  padding: 48px;
+  border-radius: 20px;
+  border: 1px solid rgba(220, 20, 20, 0.2);
+}
+
+/* ============================================
+   PRODUCT IMAGE SECTION
+   ============================================ */
+.product-image-section {
+  position: relative;
+}
+
+.product-detail-image {
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+  border-radius: 20px;
+  background: #0a0a0a;
+  border: 2px solid rgba(220, 20, 60, 0.4);
+  padding: 20px;
+}
+
+/* ============================================
+   BADGES
+   ============================================ */
+.product-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #ff0000, #8b0000);
+  color: #fff;
+  padding: 10px 19px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-badge.promo {
+  background: linear-gradient(135deg, #ff4500, #dc143c);
+}
+
+.product-badge.nouveau {
+  background: linear-gradient(135deg, #52c234, #0d8f4f);
+}
+
+/* ============================================
+   PRODUCT INFO SECTION
+   ============================================ */
+.product-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.product-detail-title {
+  font-size: 40px;
+  margin: 0;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.product-detail-desc {
+  color: #b8b8d1;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-detail-price {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ff0000;
+  margin: 20px 0;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn-add-to-cart {
+  width: 100%;
+  padding: 18px 32px;
+  background: linear-gradient(135deg, #ff0000, #dc143c);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px 0;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-add-to-cart:hover {
+  background: linear-gradient(135deg, #dc143c, #8b0000);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(220, 20, 60, 0.5);
+}
+
+.btn-add-to-cart:active {
+  transform: translateY(0);
+}
+
+.btn-add-to-cart i {
+  font-size: 22px;
+}
+
+/* ============================================
+   FEATURES
+   ============================================ */
+.product-features {
+  background: #0a0a0a;
+  padding: 24px;
+  border-radius: 15px;
+  border: 1px solid rgba(220, 20, 60, 0.3);
+}
+
+.product-features h3 {
+  color: #ff0000;
+  margin-bottom: 16px;
+  font-size: 21px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-features li {
+  padding: 13px 0;
+  color: #e0e0e0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-features li i {
+  color: #52c234;
+  font-size: 16px;
+}
+
+/* ============================================
+   LOADING & ERROR STATES
+   ============================================ */
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.loading i {
+  font-size: 48px;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.loading p {
+  font-size: 18px;
+  color: #b8b8d1;
+}
+
+.error-message {
+  text-align: center;
+  padding: 60px 20px;
+  background: #1a1a1a;
+  border-radius: 15px;
+  border: 1px solid rgba(220, 20, 60, 0.3);
+}
+
+.error-message i {
+  font-size: 64px;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.error-message h2 {
+  color: #ff0000;
+  margin-bottom: 15px;
+}
+
+.error-message p {
+  color: #b8b8d1;
+  margin-bottom: 25px;
+}
+
+/* ============================================
+   INFORMATION SECTIONS
+   ============================================ */
+.product-full-description,
+.product-composition,
+.product-nutrition,
+.product-usage,
+.product-tips {
+  background: #1a1a1a;
+  padding: 32px;
+  border-radius: 15px;
+  border: 1px solid rgba(220, 20, 60, 0.3);
+  margin-bottom: 24px;
+}
+
+.product-full-description h2,
+.product-composition h2,
+.product-nutrition h2,
+.product-usage h2,
+.product-tips h2 {
+  color: #ff0000;
+  margin-bottom: 20px;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-full-description p,
+.product-composition p,
+.product-usage p {
+  color: #e0e0e0;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.product-tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-tips li {
+  padding: 10px 0;
+  color: #e0e0e0;
+  padding-left: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-tips li i {
+  color: #ffd700;
+  position: absolute;
+  left: 0;
+}
+
+/* ============================================
+   NUTRITION TABLE
+   ============================================ */
+.nutrition-table {
+  width: 100%;
+  margin-top: 24px;
+  border-collapse: collapse;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(220, 20, 60, 0.2);
+}
+
+.nutrition-table th {
+  background: #0a0a0a;
+  color: #ff0000;
+  font-weight: 600;
+}
+
+.nutrition-table td {
+  color: #e0e0e0;
+}
+
+.nutrition-table tr:hover {
+  background: rgba(220, 20, 60, 0.1);
+}

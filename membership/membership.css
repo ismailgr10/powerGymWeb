@@ -1,0 +1,308 @@
+/* --- Reset & Base --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #050505;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Header --- */
+header {
+  text-align: center;
+  padding: 80px 20px 60px;
+  animation: fadeInDown 0.8s ease;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 15px;
+  letter-spacing: -2px;
+}
+
+h1 span {
+  color: #ff0000;
+}
+
+.subtitle {
+  color: #a1a1aa;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- Pricing Container --- */
+.pricing-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  align-items: center; /* Pour centrer verticalement la carte Pro plus grande */
+}
+
+/* --- Carte de Prix --- */
+.price-card {
+  background: #121212;
+  border: 1px solid #262626;
+  border-radius: 16px;
+  padding: 40px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.6s forwards;
+}
+
+.price-card:hover {
+  transform: translateY(-10px);
+  border-color: #444;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Carte "Populaire" (Design spécial) --- */
+.price-card.popular {
+  border-color: #ff0000;
+  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
+}
+
+.price-card.popular:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 50px rgba(255, 0, 0, 0.3);
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff0000;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+/* --- Contenu Carte --- */
+.plan-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.price {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #a1a1aa;
+  font-weight: 400;
+}
+
+.divider {
+  height: 1px;
+  background: #333;
+  margin: 30px 0;
+}
+
+/* --- Liste Fonctionnalités --- */
+.features-list {
+  list-style: none;
+  margin-bottom: 40px;
+  flex-grow: 1; /* Pousse le bouton vers le bas */
+}
+
+.features-list li {
+  margin-bottom: 15px;
+  color: #a1a1aa;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.features-list li i {
+  margin-right: 12px;
+  font-size: 1rem;
+}
+
+.features-list li i.check {
+  color: #ff0000;
+}
+.features-list li i.cross {
+  color: #444;
+}
+.features-list li.disabled {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* --- Bouton --- */
+.btn-plan {
+  width: 100%;
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid #262626;
+  background: transparent;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-size: 1rem;
+}
+
+.btn-plan:hover {
+  background: white;
+  color: black;
+  border-color: white;
+}
+
+.price-card.popular .btn-plan {
+  background: #ff0000;
+  border: none;
+  box-shadow: 0 5px 20px rgba(255, 0, 0, 0.3);
+}
+
+.price-card.popular .btn-plan:hover {
+  background: #ff3333;
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* --- FAQ Section --- */
+.faq-section {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 20px 100px;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.faq-item {
+  background: #121212;
+  border: 1px solid #262626;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.faq-question {
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  background: #1a1a1a;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  color: #a1a1aa;
+  line-height: 1.6;
+  transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 0 20px 20px;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+  color: #ff0000;
+}
+
+/* --- Animations --- */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.back-home-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, red, darkred);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.back-home-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.5);
+}
+
+.back-home-btn i {
+  font-size: 1.2rem;
+}
+
+

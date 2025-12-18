@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Gym - Red Edition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<nav>
+      <!--span se sont les lignes du menu hamburger-->
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="navMenu">
+        <li>
+          <a href="" class="logo"
+            ><h3>
+              <i
+                class="fa-solid fa-dumbbell fa-rotate-90"
+                style="color: red"></i>
+              <span class="redletter">P</span>ower <span class="redletter">G</span>ym
+            </h3></a
+          >
+        </li>
+        <li>
+          <a href="/index.html" id="navigation"><span class="redletter">H</span>ome</a>
+        </li>
+        <li>
+          <a href="/bodymap/BodyMap.html" id="navigation"><span class="redletter">B</span>ody<span class="redletter">M</span>ap</a>
+        </li>
+        <li>
+          <a href="/plus de produits/store.html" id="navigation"><span class="redletter">S</span>tore</a>
+        </li>
+        <li>
+          <a href="" id="navigation"><span class="redletter">S</span>ervices</a>
+        </li>
+        <li>
+          <a href="/membership/membership.html" id="navigation"><span class="redletter">M</span>embership</a>
+        </li>
+      </ul>
+    </nav>
+
+
+<main class="container">
+
+    <section class="card">
+        <h2><i class="fas fa-weight-scale"></i> Calculateur IMC</h2>
+        <div class="field">
+            <label>Poids (kg)</label>
+            <input type="number" id="weight" value="70" placeholder="Ex: 75">
+        </div>
+        <div class="field">
+            <label>Taille (cm)</label>
+            <input type="number" id="height" value="170" placeholder="Ex: 180">
+        </div>
+        <button onclick="calculateIMC()">CALCULER IMC</button>
+        <div class="result-box">
+            <span id="imcResult">--</span>
+            <small id="imcMsg">Résultat</small>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2><i class="fas fa-fire"></i> Calories Journalières</h2>
+        <div class="field">
+            <label>Âge & Sexe</label>
+            <div class="row">
+                <input type="number" id="age" value="25">
+                <select id="gender">
+                    <option value="male">Homme</option>
+                    <option value="female">Femme</option>
+                </select>
+            </div>
+        </div>
+        <div class="field">
+            <label>Activité</label>
+            <select id="activity">
+                <option value="1.2">Sédentaire</option>
+                <option value="1.55" selected>Modéré (3-4x/sem)</option>
+                <option value="1.9">Intense (6x+/sem)</option>
+            </select>
+        </div>
+        <button onclick="calculateCalories()">CALCULER CALORIES</button>
+        <div class="result-box">
+            <span id="caloriesResult">0</span> <small>kcal / jour</small>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2><i class="fas fa-drumstick-bite"></i> Besoin Protéines</h2>
+        <div class="field">
+            <label>Poids du corps (kg)</label>
+            <input type="number" id="weightProt" value="70">
+        </div>
+        <div class="field">
+            <label>Objectif</label>
+            <select id="goal">
+                <option value="1.2">Santé (1.2g/kg)</option>
+                <option value="1.8" selected>Muscle (1.8g/kg)</option>
+                <option value="2.2">Sèche (2.2g/kg)</option>
+            </select>
+        </div>
+        <button onclick="calculateProteins()">CALCULER PROTÉINES</button>
+        <div class="result-box">
+            <span id="proteinResult">0</span> <small>g / jour</small>
+        </div>
+    </section>
+
+</main>
+
+<footer class="simple-footer">
+      <div class="simple-footer-container">
+        <h3 class="simple-footer-logo">
+          <i class="fa-solid fa-dumbbell fa-rotate-90"></i>
+          <span class="redletter">P</span>ower<span class="redletter">G</span>ym
+        </h3>
+
+        <div class="simple-footer-nav">
+          <a href="/index.html">Accueil</a>
+          <a href="/bodymap/BodyMap.html">BodyMap</a>
+          <a href="/plus de produits/store.html">Store</a>
+          <a href="/theServices/index3.html">Services</a>
+          <a href="/membership/membership.html">Membership</a>
+        </div>
+
+        <div class="simple-footer-social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <p class="simple-footer-copyright">
+          &copy; 2024 <span class="highlight">PowerGym</span> - Tous droits
+          réservés
+        </p>
+      </div>
+    </footer>
+
+<script src="script3.js"></script>
+</body>
+</html>

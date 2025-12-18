@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PowerGym Store</title>
+
+    <link rel="stylesheet" href="store.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="plusProduits.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </head>
+  <body>
+    <nav>
+      <!--span se sont les lignes du menu hamburger-->
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="navMenu">
+        <li>
+          <a href="/index.html" class="logo"
+            ><h3>
+              <i
+                class="fa-solid fa-dumbbell fa-rotate-90"
+                style="color: red"></i>
+              <span class="redletter">P</span>ower
+              <span class="redletter">G</span>ym
+            </h3></a
+          >
+        </li>
+        <li>
+          <a href="/index.html" id="navigation"
+            ><span class="redletter">H</span>ome</a
+          >
+        </li>
+        <li>
+          <a href="/bodymap/BodyMap.html" id="navigation"
+            ><span class="redletter">B</span>ody<span class="redletter">M</span
+            >ap</a
+          >
+        </li>
+        <li>
+          <a href="/plus de produits/store.html" id="navigation"
+            ><span class="redletter">S</span>tore</a
+          >
+        </li>
+        <li>
+          <a href="/theServices/index3.html" id="navigation"><span class="redletter">S</span>ervices</a>
+        </li>
+        <li>
+          <a href="/membership/membership.html" id="navigation"
+            ><span class="redletter">M</span>embership</a
+          >
+        </li>
+      
+
+    
+      </ul>
+    </nav>
+    <!-- Section Promotions -->
+    <section class="store-section">
+      <h2 class="section-title">
+        <span>P</span>romotions <span>S</span>péciales
+      </h2>
+      <div class="grid-contenair-home">
+        <div
+          class="card"
+          style="grid-area: card1; cursor: pointer"
+          onclick="window.location.href='productDetails.html?product=promo1'">
+          <img src="./images/curse_.webp" alt="" />
+          <div class="content">
+            <span class="badge">-25%</span>
+            <h2>Curse JNX Pré-workout</h2>
+            <p class="price">
+              <span class="old-price">39.99€</span>
+              <span class="new-price">29.99€</span>
+            </p>
+            <button class="btn-cart" onclick="event.stopPropagation()">
+              Ajouter au panier
+            </button>
+          </div>
+        </div>
+        <div
+          class="card"
+          style="grid-area: card2; cursor: pointer"
+          onclick="window.location.href='productDetails.html?product=promo2'">
+          <img src="./images/creatinedrive.webp" alt="" />
+          <div class="content">
+            <span class="badge">-15%</span>
+            <h2>Creatine Drive monohydrate</h2>
+            <p class="price">
+              <span class="old-price">24.99€</span>
+              <span class="new-price">21.24€</span>
+            </p>
+            <button class="btn-cart" onclick="event.stopPropagation()">
+              Ajouter au panier
+            </button>
+          </div>
+        </div>
+        <div
+          class="card"
+          style="grid-area: card3; cursor: pointer"
+          onclick="window.location.href='productDetails.html?product=promo3'">
+          <img src="./images/whey_prot.jpg" alt="" />
+          <div class="content">
+            <span class="badge">-30%</span>
+            <h2>Whey Protein</h2>
+            <p class="price">
+              <span class="old-price">49.99€</span>
+              <span class="new-price">34.99€</span>
+            </p>
+            <button class="btn-cart" onclick="event.stopPropagation()">
+              Ajouter au panier
+            </button>
+          </div>
+        </div>
+        <div
+          class="card"
+          style="grid-area: card4; cursor: pointer"
+          onclick="window.location.href='productDetails.html?product=promo4'">
+          <img src="./images/masse_infusion.jpeg" alt="" />
+          <div class="content">
+            <span class="badge">-20%</span>
+            <h2>Masse Infusion</h2>
+            <p class="price">
+              <span class="old-price">44.99€</span>
+              <span class="new-price">35.99€</span>
+            </p>
+            <button class="btn-cart" onclick="event.stopPropagation()">
+              Ajouter au panier
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Nouveaux Produits -->
+    <section class="new-products-section">
+      <h2 class="section-title"><span>N</span>ouveaux <span>P</span>roduits</h2>
+
+      <div class="container">
+        <div class="zone" style="grid-area: zone1">
+          <img
+            src="./casein.webp"
+            alt="Casein Protein"
+            class="imageNewProduct" />
+        </div>
+        <div class="zone" style="grid-area: zone2">
+          <p>nouveau</p>
+        </div>
+        <div class="zone" style="grid-area: zone4">
+          <img src="./creaDyma.avif" class="imageNewProduct" />
+        </div>
+        <div class="zone" style="grid-area: zone5">
+          <img src="./curesePump.webp" class="imageNewProduct" />
+        </div>
+        <div class="zone" style="grid-area: zone6">
+          <img src="./hydoWhey.jpg" class="imageNewProduct" />
+        </div>
+        <div class="zone" style="grid-area: zone3">
+          <button class="ViewMore" id="viewMoreBtn">Voir plus</button>
+        </div>
+        <div class="zone" style="grid-area: zone7">
+          <img src="./c4.jpg" class="imageNewProduct" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Catalogue Complet -->
+    <section class="catalog-section" id="catalogSection" style="display: none">
+      <h1><span>N</span>os <span>S</span>uppléments <span>P</span>remium</h1>
+
+      <div class="container-prod">
+        <div class="prod" style="grid-area: prod1">
+          <div class="product-badge">POPULAIRE</div>
+          <img
+            src="./imagesProd/wheyProd.png"
+            alt="Whey Protein"
+            class="imageNewProduct" />
+          <div class="product-info">
+            <h3 class="product-title">Whey Protein Gold</h3>
+            <p class="product-desc">Protéine de lactosérum premium</p>
+            <div class="product-footer">
+              <span class="product-price">39,99€</span>
+              <button class="btn-cart">
+                <i class="fas fa-shopping-cart"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="prod" style="grid-area: prod2">
+          <img
+            src="./imagesProd/creaProd.png"
+            alt="Creatine"
+            class="imageNewProduct" />
+          <div class="product-info">
+            <h3 class="product-title">Créatine Monohydrate</h3>
+            <p class="product-desc">Augmente force et endurance</p>
+            <div class="product-footer">
+              <span class="product-price">24,99€</span>
+              <button class="btn-cart">
+                <i class="fas fa-shopping-cart"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="prod" style="grid-area: prod3">
+          <div class="product-badge promo">-15%</div>
+          <img
+            src="./imagesProd/c4Prod.png"
+            alt="C4 Pre-Workout"
+            class="imageNewProduct" />
+          <div class="product-info">
+            <h3 class="product-title">C4 Pre-Workout</h3>
+            <p class="product-desc">Énergie explosive avant l'entraînement</p>
+            <div class="product-footer">
+              <span class="product-price">34,99€</span>
+              <button class="btn-cart">
+                <i class="fas fa-shopping-cart"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="prod" style="grid-area: prod4">
+          <div class="product-badge outofstock">OUT OF STOCK</div>
+          <img
+            src="./imagesProd/iso100Prod.png"
+            alt="ISO 100"
+            class="imageNewProduct" />
+          <div class="product-info">
+            <h3 class="product-title">ISO 100 Isolate</h3>
+            <p class="product-desc">Isolat de whey ultra pur</p>
+            <div class="product-footer">
+              <span class="product-price">49,99€</span>
+            </div>
+          </div>
+        </div>
+        <div class="prod" style="grid-area: prod5">
+          <img
+            src="./imagesProd/bcaaProd.png"
+            alt="BCAA"
+            class="imageNewProduct" />
+          <div class="product-info">
+            <h3 class="product-title">BCAA Complex</h3>
+            <p class="product-desc">Récupération musculaire optimale</p>
+            <div class="product-footer">
+              <span class="product-price">29,99€</span>
+              <button class="btn-cart">
+                <i class="fas fa-shopping-cart"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="prod" style="grid-area: prod6">
+          <div class="product-badge nouveau">NOUVEAU</div>
+          <img
+            src="./imagesProd/nitroProd.png"
+            alt="Nitro Tech"
+            class="imageNewProduct" />
+          <div class="product-info">
+            <h3 class="product-title">Nitro-Tech</h3>
+            <p class="product-desc">Formule avancée whey + créatine</p>
+            <div class="product-footer">
+              <span class="product-price">44,99€</span>
+              <button class="btn-cart">
+                <i class="fas fa-shopping-cart"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="prod" style="grid-area: prod7">
+          <div class="product-badge outofstock">OUT OF STOCK</div>
+          <img
+            src="./imagesProd/2in1.png"
+            alt="2 in 1"
+            class="imageNewProduct" />
+          <div class="product-info">
+            <h3 class="product-title">2-in-1 Formula</h3>
+            <p class="product-desc">Pré-workout et énergie</p>
+            <div class="product-footer">
+              <span class="product-price">32,99€</span>
+            </div>
+          </div>
+        </div>
+        <div class="prod" style="grid-area: prod8">
+          <img
+            src="./imagesProd/hydroProd.png"
+            alt="Hydrolysat"
+            class="imageNewProduct" />
+          <div class="product-info">
+            <h3 class="product-title">Hydro Whey</h3>
+            <p class="product-desc">Hydrolysat à absorption rapide</p>
+            <div class="product-footer">
+              <span class="product-price">54,99€</span>
+              <button class="btn-cart">
+                <i class="fas fa-shopping-cart"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="prod" style="grid-area: prod9">
+          <div class="product-badge outofstock">OUT OF STOCK</div>
+          <img
+            src="./imagesProd/optiMProd.webp"
+            alt="Optimum"
+            class="imageNewProduct" />
+          <div class="product-info">
+            <h3 class="product-title">Optimum Nutrition</h3>
+            <p class="product-desc">La référence mondiale</p>
+            <div class="product-footer">
+              <span class="product-price">42,99€</span>
+            </div>
+          </div>
+        </div>
+        <div class="prod" style="grid-area: prod10">
+          <div class="product-badge arriving">ARRIVING SOON</div>
+          <img
+            src="./imagesProd/seriousMassProd.png"
+            alt="Serious Mass"
+            class="imageNewProduct" />
+          <div class="product-info">
+            <h3 class="product-title">Serious Mass</h3>
+            <p class="product-desc">Gainer haute calorie</p>
+            <div class="product-footer">
+              <span class="product-price">59,99€</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod" style="grid-area: prod11">
+          <div class="product-badge arriving">ARRIVING SOON</div>
+          <img
+            src="./imagesProd/gluta.png"
+            alt="Glutamine"
+            class="imageNewProduct" />
+          <div class="product-info">
+            <h3 class="product-title">Glutamine Powder</h3>
+            <p class="product-desc">Récupération et immunité</p>
+            <div class="product-footer">
+              <span class="product-price">27,99€</span>
+              <button class="btn-cart">
+                <i class="fas fa-shopping-cart"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="prod" style="grid-area: prod12">
+          <div class="product-badge arriving">ARRIVING SOON</div>
+          <img
+            src="./imagesProd/massTechProd.png"
+            alt="Mass Tech"
+            class="imageNewProduct" />
+          <div class="product-info">
+            <h3 class="product-title">Mass-Tech</h3>
+            <p class="product-desc">Gainer protéines et glucides</p>
+            <div class="product-footer">
+              <span class="product-price">52,99€</span>
+              <button class="btn-cart">
+                <i class="fas fa-shopping-cart"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<footer class="simple-footer">
+      <div class="simple-footer-container">
+        <h3 class="simple-footer-logo">
+          <i class="fa-solid fa-dumbbell fa-rotate-90"></i>
+          <span class="redletter">P</span>ower<span class="redletter">G</span>ym
+        </h3>
+
+        <div class="simple-footer-nav">
+          <a href="/index.html">Accueil</a>
+          <a href="/bodymap/BodyMap.html">BodyMap</a>
+          <a href="/plus de produits/store.html">Store</a>
+          <a href="/theServices/index3.html">Services</a>
+          <a href="/membership/membership.html">Membership</a>
+        </div>
+
+        <div class="simple-footer-social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <p class="simple-footer-copyright">
+          &copy; 2024 <span class="highlight">PowerGym</span> - Tous droits
+          réservés
+        </p>
+      </div>
+    </footer>
+    <script src="produitsDetails.js"></script>
+    <script src="main.js"></script>
+    <script>
+      // Fonction pour ajouter un produit au panier
+      function addToCart(productName, productPrice) {
+        // Afficher le message de succès
+        showSuccessMessage(productName);
+
+        // Rediriger après 1.5 secondes avec les paramètres dans l'URL
+        setTimeout(function () {
+          const url =
+            "formulaire.html?product=" +
+            encodeURIComponent(productName) +
+            "&price=" +
+            encodeURIComponent(productPrice);
+          window.location.href = url;
+        }, 1500);
+      }
+
+      // Fonction pour afficher le message de succès
+      function showSuccessMessage(productName) {
+        // Créer l'élément de notification
+        const notification = document.createElement("div");
+        notification.style.cssText = `
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          background: linear-gradient(135deg, #28a745, #20c997);
+          color: white;
+          padding: 20px 30px;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(40, 167, 69, 0.5);
+          z-index: 10000;
+          animation: slideIn 0.5s ease-out;
+          font-size: 1.1rem;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        `;
+
+        notification.innerHTML = `
+          <i class="fas fa-check-circle" style="font-size: 1.5rem;"></i>
+          <div>
+            <div style="font-size: 1.2rem;">Produit ajouté avec succès!</div>
+            <div style="font-size: 0.9rem; opacity: 0.9; margin-top: 5px;">${productName}</div>
+          </div>
+        `;
+
+        // Ajouter l'animation CSS
+        const style = document.createElement("style");
+        style.textContent = `
+          @keyframes slideIn {
+            from {
+              transform: translateX(400px);
+              opacity: 0;
+            }
+            to {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+        `;
+        document.head.appendChild(style);
+
+        // Ajouter au body
+        document.body.appendChild(notification);
+
+        // Retirer après 1.5 secondes
+        setTimeout(function () {
+          notification.style.animation = "slideIn 0.5s ease-out reverse";
+          setTimeout(function () {
+            notification.remove();
+          }, 500);
+        }, 1000);
+      }
+
+      // Ajouter les gestionnaires d'événements pour tous les boutons "Ajouter au panier"
+      document.addEventListener("DOMContentLoaded", function () {
+        const addToCartButtons = document.querySelectorAll(".btn-cart");
+
+        addToCartButtons.forEach(function (button) {
+          button.addEventListener("click", function (e) {
+            e.stopPropagation();
+
+            // Trouver la carte ou le produit parent
+            const productCard = this.closest(".card") || this.closest(".prod");
+
+            if (productCard) {
+              // Extraire le nom du produit
+              const productName =
+                productCard.querySelector("h2")?.textContent ||
+                productCard.querySelector(".product-title")?.textContent ||
+                "Produit";
+
+              // Extraire le prix
+              let productPrice = "";
+              const newPriceElement = productCard.querySelector(".new-price");
+              const priceElement = productCard.querySelector(".product-price");
+
+              if (newPriceElement) {
+                productPrice = newPriceElement.textContent;
+              } else if (priceElement) {
+                productPrice = priceElement.textContent;
+              } else {
+                productPrice = "Prix non disponible";
+              }
+
+              // Ajouter au panier
+              addToCart(productName, productPrice);
+            }
+          });
+        });
+      });
+
+      // Afficher la section catalogue quand on clique sur "View more product"
+      document
+        .getElementById("viewMoreBtn")
+        .addEventListener("click", function () {
+          const catalogSection = document.getElementById("catalogSection");
+          catalogSection.style.display = "block";
+          // Smooth scroll vers la section
+          catalogSection.scrollIntoView({ behavior: "smooth", block: "start" });
+          // Animation d'apparition
+          catalogSection.style.animation = "fadeInUp 0.8s ease-out";
+        });
+    </script>
+  </body>
+</html>

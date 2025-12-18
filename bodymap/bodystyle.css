@@ -1,0 +1,111 @@
+body{
+    font-family: Arial,Sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    background-image: url(/bodymap/images/salle.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#btn{
+    background: white;
+    padding: 20px;
+    box-shadow: 0 8px 40px rgba(255, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative; /* allow absolute placement of home button */
+}
+#btn button{
+    padding: 20px;
+    width: 120px;
+    color: white;
+    background-color: red;
+    font-weight: bolder;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s , color 0.3s ease;
+}
+#btn button:first-child{
+    /* home button placed on the left edge of the bar */
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    color: #111;
+    width: auto;
+    padding: 10px 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    border-radius: 8px;
+}
+#btn button:hover{
+    background-color: black;
+    box-shadow: 0 8px 40px rgba(255, 0, 0, 0.8);
+}
+section {
+    width: 800px;
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+
+    /* vitrine flou (frosted glass) */
+    background: rgba(255,255,255,0.06); /* subtle light overlay */
+    border: 1px solid rgba(255,255,255,0.12);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    backdrop-filter: blur(8px) saturate(120%);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6), 0 0 18px rgba(194,11,11,0.035) inset;
+
+    /* CENTRAGE DU CONTENU */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+section img {
+    display: block;
+    margin: 15px auto;
+
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/* image entrance animation */
+section.active img{
+    animation: imgPop 420ms cubic-bezier(.2,.9,.3,1) both;
+}
+@keyframes imgPop{
+    from{ opacity: 0; transform: translateY(10px) scale(.98); }
+    to{ opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* text entrance animations with simple stagger by type */
+section.active h2{
+    animation: textFadeUp 360ms ease both;
+    animation-delay: 0ms;
+}
+section.active h4{
+    animation: textFadeUp 360ms ease both;
+    animation-delay: 80ms;
+}
+section.active p{
+    animation: textFadeUp 360ms ease both;
+    animation-delay: 150ms;
+}
+@keyframes textFadeUp{
+    from{ opacity: 0; transform: translateY(8px); }
+    to{ opacity: 1; transform: translateY(0); }
+}
+section.active{
+    display: flex;
+    animation: fadeInSection 360ms ease both;
+}
+
+@keyframes fadeInSection{
+    from{ opacity: 0; transform: translateY(10px); }
+    to{ opacity: 1; transform: translateY(0); }
+}
